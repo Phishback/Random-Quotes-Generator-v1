@@ -47,17 +47,8 @@ function printQuote() {
 
   document.getElementById('quote-box').innerHTML = outDisplayQuote;
 };
-function getRandomColor () {
-	return Math.floor(Math.random() * 256);
-}
-
-function changeColor () {
-	var bodyDiv = document.getElementById('colors');
-  	bodyDiv.style.backgroundColor = 'rgba(' + getRandomColor() + ',' + getRandomColor() + ',' + getRandomColor() + ',1)';
-}
 
 // Call the print quote function
 // Set the intervanl "refresh" time the printQuote fucntion to 30 seconds
 printQuote();
 setInterval(printQuote, 30000);
-changeColor();
