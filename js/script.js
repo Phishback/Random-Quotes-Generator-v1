@@ -16,7 +16,7 @@ var quotes = [
   {
     quote: "The early bird gets the worm, but the second mouse gets the cheese.",
     source: "Willie Nelson",
-    citation: "Unkown",
+    citation: "Unknown",
     year: 2008,
     tag: "food/humor"
   },
@@ -30,7 +30,24 @@ var quotes = [
 
   },
 
+  {
+    quote: "Age is something that doesn\'t matter, unless you are a cheese.",
+    source: "Luis Bunuel",
+    citation: "Unknown",
+    year: 2016,
+    tag: "food/humor"
+  },
+
+  {
+    quote: "I\'ve got a fever and the only prescription is more cowbell",
+    source: "THE Bruce Dickinson",
+    citation: "Dynamite sound",
+    year: 1976,
+    tag: "humor"
+  }
+
 ];
+
 // Using the quotes array object literal(s), assign each quote to a numerical value
 function getRandomQuote () {
   var randomQuote = Math.floor(Math.random() * quotes.length);
