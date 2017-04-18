@@ -10,7 +10,7 @@ var quotes = [
     source: "G.K. Chesteron",
     citation: "Alarms and Discussions",
     year: 1911,
-    tag: "food/humor"
+    tag: ", food/humor"
   },
 
   {
@@ -18,7 +18,7 @@ var quotes = [
     source: "Willie Nelson",
     citation: "Unknown",
     year: 2008,
-    tag: "food/humor"
+    tag: ", food/humor"
   },
 
   {
@@ -26,7 +26,7 @@ var quotes = [
     source: "Avery Aames",
     citation: " The Long Quiche Goodbye",
     year: 2010,
-    tag: "food/humor"
+    tag: ", food/humor"
 
   },
 
@@ -35,7 +35,7 @@ var quotes = [
     source: "Luis Bunuel",
     citation: "Unknown",
     year: 2016,
-    tag: "food/humor"
+    tag: ", food/humor"
   },
 
   {
@@ -43,7 +43,7 @@ var quotes = [
     source: "THE Bruce Dickinson",
     citation: "Dynamite sound",
     year: 1976,
-    tag: "humor"
+    tag: ", humor"
   }
 
 ];
@@ -61,6 +61,7 @@ function printQuote() {
   outDisplayQuote += '<p class="source">' + randomQuote.source;
   outDisplayQuote += '<span class="citation">' + randomQuote.citation + '</span>';
   outDisplayQuote += '<span class="year">' + randomQuote.year + '</span>';
+  outDisplayQuote += '<span class="tag">' + randomQuote.tag + '</span>';
   outDisplayQuote += '</p>';
   document.getElementById('quote-box').innerHTML = outDisplayQuote;
 };
