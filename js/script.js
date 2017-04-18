@@ -1,6 +1,7 @@
 // event listener to respond to "Show another quote" button clicks
 // when user clicks anywhere on the button, the "printQuote" function is called
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
+document.getElementById('loadQuote').addEventListener("click", getRandomColor, false);
 var quotes = [
 // Storing all quotes in a value decalred "quotes" with it's assiocated properties
 
@@ -44,11 +45,19 @@ function printQuote() {
   outDisplayQuote += '<span class="citation">' + randomQuote.citation + '</span>';
   outDisplayQuote += '<span class="year">' + randomQuote.year + '</span>';
   outDisplayQuote += '</p>';
-
   document.getElementById('quote-box').innerHTML = outDisplayQuote;
 };
-
+// Setting a function to change the background color on click
+function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++ ) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    document.body.style.backgroundColor = color;
+    return color;
+}
 // Call the print quote function
 // Set the intervanl "refresh" time the printQuote fucntion to 30 seconds
-printQuote();
 setInterval(printQuote, 30000);
+setInterval(getRandomColor, 30000);
